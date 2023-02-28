@@ -28,29 +28,30 @@ public class Calculator {
             {
                 case '+':
                     obj = new Add(result,num2);
-                    obj.Oper();
+                    obj.oper();
                     result = obj.res;
                     break;
 
                 case '-':
                     obj = new Sub(result,num2);
-                    obj.Oper();
+                    obj.oper();
                     result = obj.res;
                     break;
 
                 case '*':
                     obj = new Mul(result,num2);
-                    obj.Oper();
+                    obj.oper();
                     result = obj.res;
                     break;
 
                 case '/':
                     obj = new Div(result,num2);
-                    obj.Oper();
+                    obj.oper();
                     result = obj.res;
                     break;
                 default:
                     l.info("invalid choice");
+
 
             }
 
@@ -70,61 +71,12 @@ public class Calculator {
 
 }
 
-abstract class Opertions
-{
-    double num1;
-    double num2;
-    double res;
-
-    Opertions (double a,double b)
-    {
-        this.num1=a;
-        this.num2=b;
-    }
-    public abstract void oper();
-}
 
 
-class Add extends Opertions {
-    Add(double a, double b) {
-        super(a, b);
-    }
 
 
-    public void oper() {
-        super.res = super.num1 + super.num2;
-    }
-}
-
-    class Sub extends Opertions
-    {
-        Sub(double a , double b)
-        {
-            super(a,b);
-        }
-
-        public void oper() {
-            super.res = super.num1 - super.num2;
-        }
-}
-
-class Mul extends Opertions {
-    Mul(double a, double b) {
-        super(a, b);
-    }
 
 
-    public void oper() {
-        super.res = super.num1 * super.num2;
-    }
-}
 
-class Div extends Opertions {
-    Div(double a, double b) {
-        super(a, b);
-    }
 
-    public void oper() {
-        super.res = super.num1 / super.num2;
-    }
-}
+
