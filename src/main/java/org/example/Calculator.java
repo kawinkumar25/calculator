@@ -49,7 +49,8 @@ public class Calculator {
                     obj.Oper();
                     result = obj.res;
                     break;
-
+                default:
+                    l.info("invalid choice");
 
             }
 
@@ -80,7 +81,7 @@ abstract class Opertions
         this.num1=a;
         this.num2=b;
     }
-    public abstract void Oper();
+    public abstract void oper();
 }
 
 
@@ -90,7 +91,7 @@ class Add extends Opertions {
     }
 
 
-    public void Oper() {
+    public void oper() {
         super.res = super.num1 + super.num2;
     }
 }
@@ -102,7 +103,7 @@ class Add extends Opertions {
             super(a,b);
         }
 
-        public void Oper() {
+        public void oper() {
             super.res = super.num1 - super.num2;
         }
 }
@@ -113,7 +114,7 @@ class Mul extends Opertions {
     }
 
 
-    public void Oper() {
+    public void oper() {
         super.res = super.num1 * super.num2;
     }
 }
@@ -123,7 +124,7 @@ class Div extends Opertions {
         super(a, b);
     }
 
-    public void Oper() {
+    public void oper() {
         super.res = super.num1 / super.num2;
     }
 }
